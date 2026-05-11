@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub | Inventory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page_header">
+        <h1>מערכת ניהול חנות בגדים</h1>
+    </div>
+    
+    <div class="nav_bar">
+        <nav id="navs_url">
+            <a href="index.html">דף הבית</a>
+            <a href="About.html">אודות</a>
+        </nav>
+    </div>
+    
+    <div class="item_form">
+        <form action="" novalidate>
+            <label for="item_Type">סוג בגד:</label>
+            <select name="category" id="item_Type" required>
+                <option value="" disabled selected>בחר סוג בגד...</option>
+                <option value="shirt">חולצה</option>
+                <option value="pants">מכנסיים</option>
+                <option value="dress">שמלה</option>
+                <option value="skirt">חצאית</option>
+                <option value="hat">כובע</option>
+                <option value="other">אחר</option>
+            </select>
+            <br>
+            
+            <label for="item_description">תיאור הבגד:</label>
+            <input type="text" id="item_description" placeholder="לדוגמה: חולצת כותנה" required>
+            <br>
+            
+            <label for="item_color">צבע הבגד:</label>
+            <input type="color" id="item_color" required>
+            <br>
+            
+            <label for="item_price">מחיר (₪):</label>
+            <input type="number" id="item_price" min="0.01" max="1000" step="0.01" placeholder="הכנס מחיר עד 1000" required>
+            <br>
+            
+            <label for="item_Discunt">הנחה (%):</label>
+            <input type="number" id="item_Discunt" min="0" max="100" step="1" placeholder="אחוז הנחה 0-100" required>
+            <br>
+            
+            <label for="item_Pic">קישור לתמונת הבגד:</label>
+            <input type="url" id="item_Pic" placeholder="https://example.com/image.jpg" required>
+            <br>
+            
+            <button type="submit" id="submitform">הוספה</button>
+        </form>
+    </div>
+    
+    <div class="item_table">
+        <table>
+             <tr>
+                <th>סוג בגד</th>
+                <th>תיאור הבגד</th>
+                <th>צבע הבגד</th>
+                <th>מחיר סופי</th>
+                <th>הנחה (%)</th>
+                <th>תמונת הבגד</th>
+                <th>מחיקה</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
